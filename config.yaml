@@ -1,0 +1,21 @@
+paths:
+  data_dir: 'Data'
+  model_dir: 'Models'
+  results_dir: 'Results'
+
+data:
+  train_split: 0.8
+  validation_split: 0.1
+
+model:
+  time_step: 20
+  learning_rate: 0.001
+  early_stopping_patience: 15
+  reduce_lr_patience: 7
+
+backtest:
+  window_size: 252  # One trading year
+
+mlflow:
+  tracking_uri: 'sqlite:///mlflow.db'
+  experiment_name: 'stock_prediction'
